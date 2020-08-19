@@ -1,20 +1,27 @@
 <template>
   <div>
-    <Nuxt />
+    <nav-bar/>
+
+    <div class="container-md" style="margin-top:100px;">
+      <div style="margin-bottom: 130px;">
+        <Nuxt/>
+
+        <footer/>
+      </div>
+    </div>
   </div>
 </template>
 
 <style>
 html {
-  font-family:
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
+  font-family: 'Source Sans Pro',
+  -apple-system,
+  BlinkMacSystemFont,
+  'Segoe UI',
+  Roboto,
+  'Helvetica Neue',
+  Arial,
+  sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;

@@ -1,3 +1,4 @@
+import webpack from 'webpack'
 
 export default {
   /*
@@ -35,6 +36,7 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
+    "~/plugins/vee-validate.js"
   ],
   /*
   ** Auto import components
@@ -52,11 +54,18 @@ export default {
   modules: [
     // Doc: https://bootstrap-vue.js.org
     'bootstrap-vue/nuxt',
+    '@nuxtjs/axios',
   ],
   /*
   ** Build configuration
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
+    transpile: ["vee-validate/dist/rules"],
+    plugins: [
+      new webpack.ProvidePlugin({
+        '_': 'lodash'
+      })
+    ]
   }
 }
